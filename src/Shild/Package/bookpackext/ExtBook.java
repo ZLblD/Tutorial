@@ -33,5 +33,13 @@ public class ExtBook extends Book {
         this.publisher = publisher;
     }
 
-
+    @Override
+    public String toString() {
+        return "ExtBook{" +
+                "publisher='" + publisher + '\'' +
+                ", title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                ", pubDate=" + pubDate +
+                '}';
+    }
 }
