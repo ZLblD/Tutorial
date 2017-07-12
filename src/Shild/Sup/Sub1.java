@@ -1,4 +1,4 @@
-package Шилд.Sup;
+package Shild.Sup;
 
 /**
  * Created by TEHOTD7 on 04.07.2017.

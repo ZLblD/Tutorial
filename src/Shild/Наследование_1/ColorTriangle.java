@@ -1,4 +1,4 @@
-package Шилд.Наследование_1;
+package Shild.Наследование_1;
 
 /**
  * Created by TEHOTD7 on 04.07.2017.

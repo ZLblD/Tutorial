@@ -1,4 +1,4 @@
-package Шилд.ABC;
+package Shild.ABC;
 
 /**
  * Created by TEHOTD7 on 04.07.2017.
