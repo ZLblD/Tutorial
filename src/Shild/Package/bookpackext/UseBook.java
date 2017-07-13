@@ -7,7 +7,8 @@ import Shild.Package.bookpack.Book;
  */
 public class UseBook {
     public static void main(String[] args) {
-        Shild.Package.bookpack.Book books[] = new Shild.Package.bookpack.Book[5];
+//        Shild.Package.bookpack.Book books[] = new Shild.Package.bookpack.Book[5];
+        Book books[] = new Book[5];
 
         books[0] = new Book("Java: для начинающих", "Shild", 2014);
 

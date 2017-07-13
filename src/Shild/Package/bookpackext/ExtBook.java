@@ -32,7 +32,7 @@ public class ExtBook extends Book {
     public void setPublisher(String publisher) {
         this.publisher = publisher;
     }
-
+// не из книги
     @Override
     public String toString() {
         return "ExtBook{" +
