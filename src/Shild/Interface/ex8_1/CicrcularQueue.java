@@ -23,28 +23,29 @@ public class CicrcularQueue implements ICharQ {
         /** Очередь считается полной, если индекс putloc на единицу
          меньше индекса getloc или если индекс putloc указывает
          на конец массива, а индекс getloc - на его начало*/
-        if(putloc+1==getloc | ((putloc==q.length-1) & (getloc==0))){
+        if (putloc + 1 == getloc | ((putloc == q.length - 1) & (getloc == 0))) {
             System.out.println(" - Очередь заполнена");
             return;
         }
 
         putloc++;
-        if(putloc == q.length){
+        if (putloc == q.length) {
             putloc = 0;         // перейти в начало массива
         }
         q[putloc] = ch;
     }
-// Извлечь символ из очереди
+
+    // Извлечь символ из очереди
     @Override
     public char get() {
-        if(getloc == putloc){
+        if (getloc == putloc) {
             System.out.println(" - Очередь пуста");
-        return (char) 0;
+            return (char) 0;
         }
         getloc++;
-        if (getloc==q.length){
-            getloc=0;       // вернуться в начало очереди
+        if (getloc == q.length) {
+            getloc = 0;       // вернуться в начало очереди
         }
-            return q[getloc];
+        return q[getloc];
     }
 }
