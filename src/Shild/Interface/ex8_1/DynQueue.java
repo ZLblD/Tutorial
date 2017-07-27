@@ -27,9 +27,9 @@ public class DynQueue implements ICharQ {
                 t[i] = q[i];
                 q = t;
             }
+        }
         putloc++;
         q[putloc] = ch;
-        }
     }
 
     // извлечь символ из очереди
