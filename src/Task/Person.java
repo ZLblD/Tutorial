@@ -6,7 +6,19 @@ public class Person {
     String name;
     int age;
     ArrayList<Thing> things;
+    int money;
 
+    public int getMoney() {
+        return money;
+    }
+
+    public void setMoney(int money) {
+        this.money = money;
+    }
+
+    public Person(int money) {
+        this.money = money;
+    }
 
     public Person(String name, int age) {
         this.name = name;
@@ -34,8 +46,8 @@ public class Person {
     public String toString() {
         return
                 "Я " + name +
-                ", и мне= " + age +
-                '}';
+                        ", и мне= " + age +
+                        '}';
     }
 
     public ArrayList<Thing> getThings() {
@@ -43,9 +55,17 @@ public class Person {
     }
 
 
-
     public void setThings(ArrayList<Thing> things) {
         this.things = things;
+    }
+
+
+    int giveMoney(int M) {
+        return money - M;
+    }
+
+    int takeMoney(int N) {
+        return money + N;
     }
 
 

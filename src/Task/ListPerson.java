@@ -13,6 +13,9 @@ public class ListPerson {
 //        person2.said();
         Person person3 = new Person("Ilya", 25);
 
+        Money money = new Money(10);
+
+
 //        person1.setThings("Рубашка");+
 
         person1.setName("Olya");
@@ -42,5 +45,18 @@ public class ListPerson {
 
         System.out.println(person1);
         System.out.println(person1.getThings());
+
+        person1.setMoney(1000);
+        System.out.println(person1.getMoney());
+
+        person2.setMoney(800);
+        System.out.println(person2.getMoney());
+
+        person1.giveMoney(100);
+        System.out.println(person1.giveMoney(300));
+        System.out.println(person1.getMoney());
+
+
+
     }
 }
