@@ -25,6 +25,16 @@ public class IfElse {
         }
     }
 
+    static int test2(int testval, int target, int begin, int end) {
+        if (testval > target && testval <= end && testval >= begin) {
+            return +1;
+        }
+        if (testval < target && testval <= end && testval >= begin){
+            return -1;
+        }
+        else return 0;
+    }
+
     public static void main(String[] args) {
         test(10, 5);
 //        System.out.println(result);
@@ -32,5 +42,13 @@ public class IfElse {
 //        System.out.println(result);
         test(5, 5);
 //        System.out.println(result);
+//        test2(10,5,0,11);
+        System.out.println(test2(10,5,0,11));
+        System.out.println(test2(10,5,11,20));
+        System.out.println(test2(5,10,0,11));
+        System.out.println(test2(5,10,11,20));
+        System.out.println(test2(5,5,0,20));
+        System.out.println(test2(5,5,11,20));
+
     }
 }
