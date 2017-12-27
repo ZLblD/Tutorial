@@ -1,6 +1,8 @@
 package Horstmann.Glava3;
 
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Random;
 
 public class Massive {
@@ -68,6 +70,36 @@ public class Massive {
             if (i % 2 != 0) break;
             System.out.println(i);
         }
+        System.out.println("Сортировка в порядке возрастания");
+        Arrays.sort(mass5);
+        System.out.println(Arrays.toString(mass5));
 
+        System.out.println("Сортировка в порядке возрастания в заданном интервале");
+        for (int i : mass5) {
+            i = random.nextInt(10);
+            mass5[i] = i;
+        }
+        Arrays.sort(mass5, 0, 4);
+        System.out.println(Arrays.toString(mass5));
+
+        System.out.println("Сортировка в порядке убывания");
+        Integer[] mass6 = {13, 6, 7, 45, 24, 32, 2};
+        Arrays.sort(mass6, Collections.reverseOrder());
+        System.out.println(Arrays.toString(mass6));
+
+        System.out.println("Максимальное и минимальное число в массиве");
+
+        int Max, Min;
+        Min = mass5[0];
+        Max = mass5[0];
+        for (int i = 0; i < mass5.length; i++) {
+            if (Min < mass5[i]) {
+                Min = mass5[i];
+            }
+            if (Max > mass5[i]) {
+                Max = mass5[i];
+            }
+        }
+        System.out.println("Min= " + Min + ", Max= " + Max);  /// чето на оборот выдад
     }
 }
