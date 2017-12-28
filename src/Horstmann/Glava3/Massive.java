@@ -93,13 +93,23 @@ public class Massive {
         Min = mass5[0];
         Max = mass5[0];
         for (int i = 0; i < mass5.length; i++) {
-            if (Min < mass5[i]) {
+            if (mass5[i] < Min) {
                 Min = mass5[i];
             }
-            if (Max > mass5[i]) {
+            if (mass5[i] > Max) {
                 Max = mass5[i];
             }
         }
-        System.out.println("Min= " + Min + ", Max= " + Max);  /// чето на оборот выдад
+        System.out.println("Min= " + Min + ", Max= " + Max);
+
+        System.out.println("Отразить массив, аля пузырьковая сортировка");
+        System.out.println("Исходиный массив    " + Arrays.toString(mass6));
+//        System.out.println(Arrays.toString(mass6));
+        for (int i = 0; i < mass6.length /2; i++) {
+            int temp = mass6[i];
+            mass6[i] = mass6[mass6.length-1-i];
+            mass6[mass6.length-1-i] = temp;
+        }
+        System.out.println("перевернутый массив " + Arrays.toString(mass6));
     }
 }
