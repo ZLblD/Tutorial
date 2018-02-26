@@ -111,5 +111,6 @@ public class Massive {
             mass6[mass6.length-1-i] = temp;
         }
         System.out.println("перевернутый массив " + Arrays.toString(mass6));
+
     }
 }

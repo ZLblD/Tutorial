@@ -19,5 +19,13 @@ public class Test {
         System.out.println(hCode2);
         var.equals(var2);
         System.out.println(var.equals(var2));
+
+//        int rand;
+        int n = 10;
+        for (int i = 1; i < 10; i++) {
+            int rand = (int) (Math.random() * n);
+            System.out.println(rand);
+        }
+
     }
 }
