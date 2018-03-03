@@ -1,6 +1,7 @@
 package TestCollection;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class ArraylistLinkedlist {
@@ -9,9 +10,11 @@ public class ArraylistLinkedlist {
 
         Person person1 = new Person("White");
         Person person2 = new Person("Rabbit");
+//        Person person3 = new Person("Rabbit2");
 
         list.add(person1);
         list.add(person2);
+
 
 //        Person person1FromCollection = list.get(0);
 //        Person person2FromCollection = list.get(1);
@@ -27,10 +30,9 @@ public class ArraylistLinkedlist {
 
 //        list.size();
 //        System.out.println(list.size());
-        Object[] objects = list.toArray();
+//        Object[] objects = list.toArray();
+//        System.out.println(objects);
 
-
-        System.out.println(objects);
 
     }
 }
