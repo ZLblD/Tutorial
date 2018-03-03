@@ -1,12 +1,14 @@
 package Task;
 
-import java.util.ArrayList;
+class Person {
 
-public class Person {
-    String name;
-    int age;
-    ArrayList<Thing> things;
-    int money;
+    private int money;
+    private String name;
+
+    public Person(int money, String name) {
+        this.money = money;
+        this.name = name;
+    }
 
     public int getMoney() {
         return money;
@@ -14,15 +16,6 @@ public class Person {
 
     public void setMoney(int money) {
         this.money = money;
-    }
-
-    public Person(int money) {
-        this.money = money;
-    }
-
-    public Person(String name, int age) {
-        this.name = name;
-        this.age = age;
     }
 
     public String getName() {
@@ -33,50 +26,20 @@ public class Person {
         this.name = name;
     }
 
-    public int getAge() {
-        return age;
+    public void divMoney(Person person, int money) {
+        person.setMoney(person.getMoney() - money);
+        System.out.println(name + " взял у " + person.getName() + " немного денег = " + money);
     }
 
-    public void setAge(int age) {
-        this.age = age;
-
+    public void infoMoney(){
+        System.out.println("У " + name + " осталось " + money);
     }
 
     @Override
     public String toString() {
-        return
-                "Я " + name +
-                        ", и мне= " + age +
-                        '}';
+        return "Person{" +
+                "money=" + money +
+                ", name='" + name + '\'' +
+                '}';
     }
-
-    public ArrayList<Thing> getThings() {
-        return things;
-    }
-
-
-    public void setThings(ArrayList<Thing> things) {
-        this.things = things;
-    }
-
-
-    int giveMoney(int M) {
-        return money - M;
-    }
-
-    int takeMoney(int N) {
-        return money + N;
-    }
-
-
-
-    //    ArrayList<String> clothes = new ArrayList();
-// void said(){
-//     System.out.println("Я " + name + " мне " + age + " лет");
-// }
-
-//    void thing(String cloth){
-//        clothes.add(cloth);
-//        System.out.println(cloth);
-//    }
 }
