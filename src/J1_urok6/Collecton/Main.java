@@ -13,7 +13,7 @@ public class Main {
         Set set;        // неупорядоченный, дубликатов нет
 //        Queue queue;
 
-        Map map;        //ключ -> значению
+        Map<Integer, Character> map;        //ключ -> значению
         // cells[0] =  'X'; 0->'X'; нолику сопоставили Х
 
 //        list = new ArrayList<>();
@@ -37,5 +37,62 @@ public class Main {
 
         System.out.println(list);
 
+        System.out.println("-----SET-----");
+
+        set = new HashSet();
+//          set = new LinkedHashSet();
+//          set = new TreeSet();
+
+        set.add("asdf");
+        // возвращает false при добалвение двойника
+        System.out.println(set.add("hello"));
+        System.out.println(set.add("hello"));
+        set.add("hello");
+        set.add("hello");
+        set.add("hello");
+        set.add("hel" + "lo");
+        set.add("java");
+
+        System.out.println(set);
+
+        System.out.println("-----MAP-----");
+
+        map = new HashMap<>();
+
+        map.put(0, 'X');
+        map.put(1, 'O');
+        map.put(1, 'Y');
+        map.put(2, 'X');
+
+        System.out.println(map);
+        System.out.println(map.keySet());
+        System.out.println(map.values());
+
+        Map<String, Person> mapName = new HashMap();
+//        Map<String, Person> mapName2 = new LinkedHashMap<>();
+        mapName.put("friend", new Person("Tom", 20));
+//        mapName.put("friend", new Person("Tom2", 25));   // затрет Tom
+        mapName.put("vip", new Person("Kitty", 35));
+
+//        System.out.println(mapName.get("friend").name);
+
+        for (Person person : mapName.values()) {
+            System.out.println(person.name);
+        }
+
+        Map <Person, String> tagPerson = new HashMap<Person, String>();
+
+        tagPerson.put(new Person("Tom", 20), "friend");
+        tagPerson.put(new Person("Jerry", 22), "friend");
+        tagPerson.put(new Person("Mary", 25), "friend");
+        tagPerson.put(new Person("Kitty", 35), "vip");
+
+        System.out.println(tagPerson);
+        System.out.println(new HashSet<String>(tagPerson.values()));
+        for (Map.Entry<Person, String> personStringEntry : tagPerson.entrySet()) {
+            if (personStringEntry.getValue().equals("friend")){
+                System.out.println(personStringEntry.getKey().name);
+            }
+        }
     }
 }
